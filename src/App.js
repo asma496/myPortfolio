@@ -23,7 +23,7 @@ function App() {
                
                   <Router>
                 <nav>
-               <h1 className='link'> <Name /></h1>
+                
                     <Link className='link' to='/'>Home</Link>
                     <Link className='link' to='/about'>About</Link>
                     <Link className='link' to='/resume'>Resume</Link>
@@ -44,6 +44,7 @@ function App() {
                 </Switch>
             </Router>
 
+<Name />
 
 
     </div>
