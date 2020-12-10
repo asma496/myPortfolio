@@ -13,9 +13,6 @@ function Header() {
         <Image src="https://images.unsplash.com/photo-1543270123-5b5c73132cdf?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8&auto=format&fit=crop&w=500&q=60" fluid />
           
           
-          <h1>{content.header.text[0]}</h1><br />
-   <h1> {content.header.text[1]}</h1>
-   {/* <h1> {content.header.text[2]}</h1> */}
 
           
           </div>
