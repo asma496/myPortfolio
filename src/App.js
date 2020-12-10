@@ -13,48 +13,54 @@ import Resume from './pages/Resume';
 import About from './pages/About';
 import Home from './pages/Home';
 import Name from './componenets/Name';
+import { Link } from '@material-ui/Link';
 
 
 
 
 function App() {
+
   return (
-    <div className="App">
-               
-                  <Router>
-                <nav>
-{/*                 
-                    <Link className='link' to='/'>Home</Link>
-                    <Link className='link' to='/about'>About</Link>
-                    <Link className='link' to='/resume'>Resume</Link>
-                    <Link className='link' to='/Services'>Services</Link>
-                    <Link className='link' to='/Portfolio'>Portfolio</Link>
-                    <Link className='link' to='/Contact'>Contact</Link> */}
-
-
-
-
-
-
-
-                </nav>
-
-
-                <Switch>
-                    <Route path='/contact'><Contact /></Route>
-                    <Route path='/portfolio'><Portfolio /> </Route>
-                    <Route path='/services'> <Services /> </Route>
-                    <Route path='/resume'> <Resume /> </Route>
-                    <Route path='/about'><About /> </Route>
-                    <Route path='/'> <Home /></Route>
-                </Switch>
-            </Router>
-
-{/* <Name /> */}
-
-
+<div>
+    
+                  {/* <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+  <Navbar.Brand href="./Home">React-Bootstrap</Navbar.Brand>
+  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+  <Navbar.Collapse id="responsive-navbar-nav">
+    <Nav className="mr-auto">
+      <Nav.Link href="./About">Features</Nav.Link>
+      <Nav.Link href="./Services">Pricing</Nav.Link>
+    
+    </Nav>
+    <Nav>
+      <Nav.Link href="./">More deets</Nav.Link>
+      <Nav.Link eventKey={2} href="#memes">
+        Dank memes
+      </Nav.Link>
+    </Nav>
+  </Navbar.Collapse>
+</Navbar> */}
+  
+  <Typography className={classes.root}>
+  <Link href="#" onClick={preventDefault}>
+    Link
+  </Link>
+  <Link href="#" onClick={preventDefault} color="inherit">
+    {'color="inherit"'}
+  </Link>
+  <Link href="#" onClick={preventDefault} variant="body2">
+    {'variant="body2"'}
+  </Link>
+</Typography>
+    
+    <Name />
     </div>
-  );
-}
+  )
+};
+    
+
+
+  
+
 
 export default App;
