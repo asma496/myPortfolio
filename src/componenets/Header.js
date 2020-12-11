@@ -1,47 +1,52 @@
 import React from 'react'
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import LazyLoad from 'react-lazyload';
-import content from '../content';
-import './styles.css'
-import image from 'react-bootstrap/Image';
-import { Image } from 'react-bootstrap';
+import { makeStyles } from '@material-ui/core/styles';
+import { Typography, Avatar, Grid, Box } from '@material-ui/core'
+import Typed from 'react-typed';
+//CSS STYLES
+const useStyles =makeStyles(theme=>({
+    avatar:{
+       width: theme.spacing(15),
+       height: theme.spacing(15),
+       margin: theme.spacing(1),
+    },
+   title:{
+       color: 'tomato',
+   },
+   subtitle:{
+       color: 'tan',
+       marginBottom: '3rem',
+   },
+   typedContainer:{
+       position:'absolute',
+       left: '50%',
+       top: '50%',
+       transform: 'translate(-50%, -50%)',
+       width: '100vw',
+       textAlign: 'center',
+       zIndex: 1,
 
+   }
 
-function Header() {
+}))
+const Header = () => {
+    const classes = useStyles()
     return (
-        <div>
-        <Image src="https://images.unsplash.com/photo-1543270123-5b5c73132cdf?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8&auto=format&fit=crop&w=500&q=60" fluid />
-          
-          
-
-          
-          </div>
-           
-         
+        (
+          <div >
+            <Box className={classes.typedContainer}>
+                <Typography className={classes.title} variant='h4'>
+                  <Typed strings={['ASMA NOOR']} typeSpeed={40} />
+                </Typography>
+                <br/>
+                <Typography className={classes.subtitle} variant='h4'>
+                  <Typed strings={['Web designer', 'web developer', 'Mern stack']} 
+                  typeSpeed={40} backSpeed={60} loop />
+                </Typography>
+            </Box>
+            </div>
             
-      
-      
-    //     <div     
-    //   className="min-h-screen flex items-center justify-center"
-    //   style={{
-    //      background: '#ECF0F1k',
-    //   }}
-    // >
-    //   <div className="w-10/12 mx-auto flex flex-col md:flex-row-reverse items-center justify-between">
-    //     <div className="w-full md:w-2/5">
-    //       <LazyLoadImage className='pic'
-    //         src={content.header.img}
-    //         effect="blur"
-    //         placeholderSrc={process.env.PUBLIC_URL + '../images/pic1.jpg'}
-    //       />
-          
-        
-         
-    // </div>
-    // </div>
-    //        </div>
+        )
+    )
+}
 
-      )
-    }
-   
 export default Header
